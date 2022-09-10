@@ -18,7 +18,7 @@ export function GridMap() {
     zoom: 11
   });
 
-	const h3Index = latLngToCell(49.8219, 19.0434, 8);
+	const h3Index = latLngToCell(49.8219, 19.0434, 9);
 	const feature = geojson2h3.h3SetToFeature([h3Index]);
 
   return (
