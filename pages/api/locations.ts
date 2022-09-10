@@ -276,6 +276,96 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 11,
   },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Żórawinowa',
+      number: '14',
+      lat: '49.85136481',
+      long: '19.08348336',
+    },
+    installations: [
+      {
+        createdAt: new Date('01/10/2020'),
+        pacement: PlacementType.Roof,
+        production: 8,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 120,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.House
+      },
+      {
+        roofArea: 35,
+        roofMaterial: RoofMaterialType.Papa,
+        type: BuildingType.Garage
+      }
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 10,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Oksywka',
+      number: '12',
+      lat: '49.85720272',
+      long: '19.08621996',
+    },
+    installations: [
+      {
+        createdAt: new Date('01/12/2020'),
+        pacement: PlacementType.Roof,
+        production: 8,
+        type: InstallationType.SolarPanels,
+      },
+      {
+        createdAt: new Date('01/12/2020'),
+        pacement: PlacementType.Ground,
+        production: 8,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 120,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.House
+      },
+      {
+        roofArea: 80,
+        roofMaterial: RoofMaterialType.Papa,
+        type: BuildingType.Garage
+      }
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 12,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Jasna Rola',
+      number: '111',
+      lat: '49.85720272',
+      long: '19.08621996',
+    },
+    installations: [],
+    buildings: [
+      {
+        roofArea: 140,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.House
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 14,
+  },
 ]
 
 export default function handler(
