@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@deck.gl/layers": "^8.8.10",
+    "@deck.gl/react": "^8.8.10",
+    "deck.gl": "^8.8.10",
+    "geojson2h3": "^1.2.0",
+    "h3-js": "^4.0.0",
     "mapbox-gl": "^2.10.0",
     "next": "12.3.0",
     "react": "18.2.0",
