@@ -1,1 +1,1 @@
-export { GridMap } from "./GridMap"; 
+export { GridMap } from "./GridMap";

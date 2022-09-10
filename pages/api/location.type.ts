@@ -71,8 +71,3 @@ export class Location {
   productionDataPoints: ProductionDataPoint[] = []
   consumptionDataPoints: ConsumptionDataPoint[] = []
 }
-
-
-
-
-
