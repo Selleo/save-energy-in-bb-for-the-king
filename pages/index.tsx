@@ -2,6 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { GridMap } from '../components/GridMap'
 import styles from '../styles/Home.module.css'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
+const queryClient = new QueryClient()
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +16,9 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-				<GridMap />
+				<QueryClientProvider client={queryClient}>
+					<GridMap />
+				</QueryClientProvider>
       </main>
     </div>
   )
