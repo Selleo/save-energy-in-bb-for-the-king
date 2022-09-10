@@ -1,13 +1,16 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-
-type Data = {
-  name: string
-}
+import { Location } from './location.type'
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<Location[]>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+  res.status(200).json(
+    [
+      new Location(),
+      new Location(),
+      new Location(),
+    ]
+  )
 }
