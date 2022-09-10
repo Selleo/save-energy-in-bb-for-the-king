@@ -27,7 +27,8 @@ export class Installation {
 
 export enum BuildingType {
   House = 'House',
-  Garage = 'Garage'
+  Garage = 'Garage',
+  Unit = 'Unit'
 }
 
 export enum RoofMaterialType {
@@ -64,9 +65,9 @@ export class Location {
   buildings: Building[] = []
   primaryContact?: Person // whom to contact about the building
   peopleNumber?: number
-
-  estimatedConsumption?: number // consumption in kWh
-
+  estimatedDailyConsumption?: number // consumption in kWh
+  estimatesYearlyConsumption?: number // consumption in kWh
+  estimatesYearlyProduction?: number // consumption in kWh
   productionDataPoints: ProductionDataPoint[] = []
   consumptionDataPoints: ConsumptionDataPoint[] = []
 }
