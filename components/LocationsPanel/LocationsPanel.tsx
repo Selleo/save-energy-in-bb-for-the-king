@@ -9,11 +9,12 @@ import styles from './LocationsPanel.module.scss'
 
 interface LocationPanelProps {
   data: LocationWithId[],
+  currentIndex: number | null,
+  setCurrentIndex: Function,
   hovered: string | null,
 }
 
-export function LocationsPanel({ data, hovered }: LocationPanelProps) {
-  const [currentIndex, setCurrentIndex] = useState<number | null>(null)
+export function LocationsPanel({ data, hovered, currentIndex, setCurrentIndex }: LocationPanelProps) {
   const stylesMap = {
     location: styles.location,
     hovered: styles.hovered,

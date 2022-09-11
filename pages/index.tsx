@@ -20,6 +20,7 @@ const GridMapPage: NextPage = () => {
 		}
 	}, [])
 
+	const [currentIndex, setCurrentIndex] = useState<number | null>(null)
 	const [selectedCellId, selectCell] = useState<null | string>(null);
 	const [hovered, setHovered] = useState<null | string>(null);
   const { isLoading, error, data } = useQuery(['locations'], async () => {
@@ -47,8 +48,14 @@ const GridMapPage: NextPage = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <LocationsPanel data={filteredData} hovered={hovered}/>
-      <GridMap selectCell={selectCell} data={data} setHovered={setHovered}/>
+      <LocationsPanel data={filteredData} hovered={hovered} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>
+      <GridMap selectCell={cell => {
+				selectCell(cell);
+				setCurrentIndex(null)
+			}}
+			data={data}
+			setHovered={setHovered}
+		/>
     </QueryClientProvider>
   )
 }
