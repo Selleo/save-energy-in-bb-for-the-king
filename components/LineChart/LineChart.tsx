@@ -1,4 +1,5 @@
 import { ResponsiveLine } from "@nivo/line";
+import styles from "./LineChart.module.scss";
 
 export const LineChart = ({ data }: { data: any }) => {
   return (
@@ -51,6 +52,16 @@ export const LineChart = ({ data }: { data: any }) => {
       enablePoints={false}
       pointColor={{ theme: "background" }}
       pointLabelYOffset={-12}
+      tooltip={
+        (o) => {
+          console.log(o)
+
+          return (
+          <div className={styles.tooltip}>
+            {o.point.data.xFormatted} - {o.point.data.yFormatted} kWh
+          </div>
+        )
+      }}
       useMesh={true}
     />
   );
