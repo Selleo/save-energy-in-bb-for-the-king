@@ -28,7 +28,7 @@ export function Installations({ installations }: InstallationsProps) {
     <div className={styles.installations}>
       {installations.map((installation: Installation, index) => (
         <div key={index} className={styles.installation}>
-          {new Date(installation.createdAt).toLocaleDateString()}<br/>
+          Data założenia instalacji: {new Date(installation.createdAt).toLocaleDateString()}<br/>
           Położenie: {getPlacement(installation.placement)}<br />
           Produkcja: {installation.production} kWh<br />
           Typ instalacji: {getInstallation(installation.type)}<br />
