@@ -1,8 +1,7 @@
 import InteractiveMap, { Layer, MapLayerMouseEvent, Source } from 'react-map-gl';
 import { useCallback, useMemo, useState } from "react"
 import geojson2h3 from 'geojson2h3';
-import {latLngToCell} from "h3-js";
-import { useQuery } from '@tanstack/react-query'
+import { latLngToCell } from "h3-js";
 import { Location } from '../../pages/api/location.type';
 import { getColor } from '../../utils/get-color';
 
@@ -21,7 +20,7 @@ export interface GridMapProps {
 	data: LocationWithId[]
 }
 
-export function GridMap({selectCell, data, setHovered}: GridMapProps) {
+export function GridMap({ selectCell, data, setHovered }: GridMapProps) {
 	const hexagonFeatures = useMemo(() => {
 		const locations = data ?? []
 		const locHexagonIds = locations.map((loc: LocationWithId) => loc.h3Id)
@@ -30,18 +29,18 @@ export function GridMap({selectCell, data, setHovered}: GridMapProps) {
 		const collection = geojson2h3.h3SetToFeatureCollection(uniq)
 		return {
 			...collection,
-			features: collection.features.map(feature => ({...feature, properties: { color: getColor(data, feature)}}))
+			features: collection.features.map(feature => ({ ...feature, properties: { color: getColor(data, feature) } }))
 		}
 	}, [data])
 
 
-  const [viewport, setViewport] = useState({
-    width: "100vw",
-    height: "100vh",
-    latitude: BB_CORDS.latitude,
-    longitude: BB_CORDS.longitude,
-    zoom: 11
-  });
+	const [viewport, setViewport] = useState({
+		width: "100vw",
+		height: "100vh",
+		latitude: BB_CORDS.latitude,
+		longitude: BB_CORDS.longitude,
+		zoom: 11
+	});
 
 	const handleClick = (event: MapLayerMouseEvent) => {
 		if (!event.features) return;
@@ -55,33 +54,33 @@ export function GridMap({selectCell, data, setHovered}: GridMapProps) {
 	}
 
 	const [cursor, setCursor] = useState<string>('auto');
-  const onMouseEnter = useCallback((event: MapLayerMouseEvent) => {
+	const onMouseEnter = useCallback((event: MapLayerMouseEvent) => {
 		const hex = event.features?.find(feature => feature.source === "h3-hexagons")
-			if (hex) {
-				setCursor('pointer')
-			}
-			const cell = latLngToCell(event.lngLat.lat, event.lngLat.lng, resolution);
-			setHovered(cell)
-		}, []);
-  const onMouseLeave = useCallback(() => {
+		if (hex) {
+			setCursor('pointer')
+		}
+		const cell = latLngToCell(event.lngLat.lat, event.lngLat.lng, resolution);
+		setHovered(cell)
+	}, []);
+	const onMouseLeave = useCallback(() => {
 		setCursor('auto')
 		setHovered(null)
 	}, []);
 
-  return (
-    <InteractiveMap
+	return (
+		<InteractiveMap
 			// onViewportChange={(nextViewport) => setViewport(nextViewport)}
 			mapboxAccessToken={token}
-      initialViewState={viewport}
-  		style={{width: '100vw', height: '100vh'}}
+			initialViewState={viewport}
+			style={{ width: '100vw', height: '100vh' }}
 			interactiveLayerIds={["hexagons"]}
-      mapStyle="mapbox://styles/petermain/cko1ewc0p0st918lecxa5c8go"
-      // mapStyle="mapbox://styles/mapbox/streets-v9"
+			mapStyle="mapbox://styles/petermain/cko1ewc0p0st918lecxa5c8go"
+			// mapStyle="mapbox://styles/mapbox/streets-v9"
 			onClick={handleClick}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      cursor={cursor}
-    >
+			onMouseEnter={onMouseEnter}
+			onMouseLeave={onMouseLeave}
+			cursor={cursor}
+		>
 			<Source id="h3-hexagons" type="geojson" data={hexagonFeatures}>
 				<Layer
 					id="hexagons"
@@ -96,5 +95,5 @@ export function GridMap({selectCell, data, setHovered}: GridMapProps) {
 				/>
 			</Source>
 		</InteractiveMap>
-  );
+	);
 }
