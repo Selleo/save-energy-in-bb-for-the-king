@@ -5,6 +5,7 @@ import { Statistics } from '../Statistics'
 import { Location } from '../../../pages/api/location.type'
 import { useState } from 'react'
 import styles from './Details.module.scss'
+import { BackArrowIcon } from '../../Icon'
 
 interface DetailsProps {
   location: Location,
@@ -18,8 +19,11 @@ export function Details({ location, back }: DetailsProps) {
 
   return (
     <div className={styles.details}>
+      <div className={styles.backArrow} onClick={() => back()} title="Wstecz">
+        <BackArrowIcon />
+      </div>
+
       <h2>{location.address.street} {location.address.number}, {location.address.city}</h2>
-      <a href="#" onClick={() => back()}>Wstecz</a>
 
       <div className={styles.tabs}>
         <div

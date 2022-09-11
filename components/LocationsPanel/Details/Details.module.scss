@@ -1,5 +1,19 @@
 @import '../../../styles/global.scss';
 
+.backArrow {
+  cursor: pointer;
+  display: inline-block;
+
+  & * {
+    @include animate(stroke);
+  }
+
+  &:hover * {
+    stroke: $accent;
+    @include animate(stroke);
+  }
+}
+
 .tabs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
