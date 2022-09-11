@@ -1,5 +1,5 @@
 import InteractiveMap, { Layer, MapLayerMouseEvent, Source } from 'react-map-gl';
-import { useMemo, useState } from "react"
+import { useCallback, useMemo, useState } from "react"
 import geojson2h3 from 'geojson2h3';
 import {latLngToCell} from "h3-js";
 import { useQuery } from '@tanstack/react-query'
@@ -20,12 +20,41 @@ export interface GridMapProps {
 }
 
 export function GridMap({selectCell, data}: GridMapProps) {
+	const getColor = (feature: any) => {
+		const locationsWithinHexagon = data.filter(loc => loc.h3Id === feature.id)
+		const consumption = locationsWithinHexagon.reduce((acc, loc) => { 
+			return acc + (loc.estimatedDailyConsumption || 0)
+		}, 0)
+		const production = locationsWithinHexagon.reduce((acc, loc) => { 
+			return acc + (loc.estimatedDailyProduction || 0)
+		}, 0)
+		const delta = production - consumption;
+
+		switch(true) {
+			case(delta < 0): {
+				return "#ff0000"
+			}
+
+			case(delta > 0): {
+				return "#00ff00"
+			}
+
+			case(delta === 0): {
+				return "#0000ff"
+			}
+		}
+	}
+
 	const hexagonFeatures = useMemo(() => {
 		const locations = data ?? []
 		const locHexagonIds = locations.map((loc: LocationWithId) => loc.h3Id)
 		const uniq = [...new Set<string>(locHexagonIds)]
 
-		return geojson2h3.h3SetToFeatureCollection(uniq);
+		const collection = geojson2h3.h3SetToFeatureCollection(uniq)
+		return {
+			...collection,
+			features: collection.features.map(feature => ({...feature, properties: { color: getColor(feature)}}))
+		}
 	}, [data])
 
 
@@ -48,6 +77,16 @@ export function GridMap({selectCell, data}: GridMapProps) {
 		selectCell(cell)
 	}
 
+	const [cursor, setCursor] = useState<string>('auto');
+  const onMouseEnter = useCallback((event: MapLayerMouseEvent) => {
+		if (event.features?.find(feature => feature.source === "h3-hexagons")) {
+			setCursor('pointer')
+		}
+		}, []);
+  const onMouseLeave = useCallback(() => setCursor('auto'), []);
+
+	console.log(hexagonFeatures)
+
   return (
     <InteractiveMap
 			// onViewportChange={(nextViewport) => setViewport(nextViewport)}
@@ -58,6 +97,9 @@ export function GridMap({selectCell, data}: GridMapProps) {
       // mapStyle="mapbox://styles/petermain/cko1ewc0p0st918lecxa5c8go"
       mapStyle="mapbox://styles/mapbox/streets-v9"
 			onClick={handleClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      cursor={cursor}
     >
 			<Source id="h3-hexagons" type="geojson" data={hexagonFeatures}>
 				<Layer
@@ -68,7 +110,7 @@ export function GridMap({selectCell, data}: GridMapProps) {
 					paint={{
 						"fill-outline-color": "rgba(0,0,0,3)",
 						"fill-opacity": 0.6,
-						"fill-color": "rgba(0,0,0,1)"
+						'fill-color': ['get', 'color']
 					}}
 				/>
 			</Source>

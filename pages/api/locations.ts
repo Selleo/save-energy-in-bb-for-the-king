@@ -22,6 +22,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 30,
+    estimatedDailyProduction: 40,
   },
   {
     address: {
@@ -42,6 +43,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 100,
+    estimatedDailyProduction: 100,
   },
   {
     address: {
@@ -62,6 +64,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 10,
+    estimatedDailyProduction: 10,
   },
   {
     address: {
@@ -82,6 +85,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 30,
+    estimatedDailyProduction: 10,
   },
   {
     address: {
@@ -102,6 +106,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 340,
+    estimatedDailyProduction: 120,
   },
   {
     address: {
@@ -127,6 +132,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 12,
+    estimatedDailyProduction: 120,
   },
   {
     address: {
@@ -147,6 +153,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 12,
+    estimatedDailyProduction: 12,
   },
   {
     address: {
@@ -167,6 +174,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 30,
+    estimatedDailyProduction: 40,
   },
   {
     address: {
@@ -194,6 +202,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 18,
+    estimatedDailyProduction: 20,
   },
   {
     address: {
@@ -221,6 +230,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 12,
+    estimatedDailyProduction: 20,
   },
   {
     address: {
@@ -248,6 +258,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 11,
+    estimatedDailyProduction: 20,
   },
   {
     address: {
@@ -275,6 +286,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 11,
+    estimatedDailyProduction: 5,
   },
   {
     address: {
@@ -307,6 +319,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 10,
+    estimatedDailyProduction: 5,
   },
   {
     address: {
@@ -345,6 +358,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 12,
+    estimatedDailyProduction: 50,
   },
   {
     address: {
@@ -365,6 +379,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 14,
+    estimatedDailyProduction: 50,
   },
 ]
 

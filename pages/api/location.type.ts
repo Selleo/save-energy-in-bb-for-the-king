@@ -66,6 +66,7 @@ export class Location {
   primaryContact?: Person // whom to contact about the building
   peopleNumber?: number
   estimatedDailyConsumption?: number // consumption in kWh
+  estimatedDailyProduction?: number // consumption in kWh
   estimatesYearlyConsumption?: number // consumption in kWh
   estimatesYearlyProduction?: number // consumption in kWh
   productionDataPoints: ProductionDataPoint[] = []
