@@ -33,7 +33,7 @@ export function LocationsPanel({ data, hovered, currentIndex, setCurrentIndex }:
     <div className={styles.locationsPanel}>
       {currentIndex === null && (
         <>
-          <h1>Miejsca</h1>
+          <h1>Obszary</h1>
 
           <div className={styles.locations}>
             {decoratedData.map((loc, index) => (
