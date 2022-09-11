@@ -291,7 +291,7 @@ const locations: Location[] = [
   {
     address: {
       city: 'Bielsko Biała',
-      street: 'Żórawinowa',
+      street: 'Żurawinowa',
       number: '14',
       lat: '49.85136481',
       long: '19.08348336',
