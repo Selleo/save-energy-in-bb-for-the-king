@@ -21,7 +21,7 @@ export function Buildings({ buildings }: BuildingsProps) {
     <div className={styles.buildings}>
       {buildings.map((building: Building, index) => (
         <div className={styles.building} key={index}>
-          Powierzchnia dachu: {building.roofArea}<br />
+          Powierzchnia dachu: {building.roofArea} m<sup>2</sup><br />
           Materiał: {building.roofMaterial}<br />
           Typ budynku: {getType(building.type)}<br />
         </div>
