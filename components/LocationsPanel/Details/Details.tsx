@@ -23,7 +23,7 @@ export function Details({ location, back }: DetailsProps) {
         <BackArrowIcon />
       </div>
 
-      <h2>{location.address.street} {location.address.number}, {location.address.city}</h2>
+      <h1>{location.address.street} {location.address.number}, {location.address.city}</h1>
 
       <div className={styles.tabs}>
         <div
@@ -55,8 +55,9 @@ export function Details({ location, back }: DetailsProps) {
       <div className={styles.content}>
         {currentTab === 'statistics' && <Statistics
           estimatedDailyConsumption={location.estimatedDailyConsumption}
-          estimatesYearlyConsumption={location.estimatesYearlyConsumption}
-          estimatesYearlyProduction={location.estimatesYearlyProduction}
+          estimatedDailyProduction={location.estimatedDailyProduction}
+          estimatedYearlyConsumption={location.estimatedYearlyConsumption}
+          estimatedYearlyProduction={location.estimatedYearlyProduction}
           productionDataPoints={location.productionDataPoints}
           consumptionDataPoints={location.consumptionDataPoints}
         />}

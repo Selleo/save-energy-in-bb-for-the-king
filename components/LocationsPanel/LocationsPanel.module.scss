@@ -16,7 +16,7 @@
 .section {
   background: $background-light-color;
   border-radius: 11px;
-  padding: 1em;
+  padding: .8em;
   margin-bottom: 1.5em;
 }
 
@@ -51,6 +51,8 @@
 }
 
 .addressRow {
+  font-size: 1.250em;
+  font-weight: 500;
 	margin-bottom: 1rem;
 }
 

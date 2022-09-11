@@ -4,6 +4,11 @@ import { BuildingType, InstallationType, Location, PlacementType, RoofMaterialTy
 
 const locations: Location[] = [
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Filarowa',
@@ -11,7 +16,14 @@ const locations: Location[] = [
       lat: '49.833664',
       long: '19.037327',
     },
-    installations: [],
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
     buildings: [
       {
         roofArea: 300,
@@ -23,8 +35,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 30,
     estimatedDailyProduction: 40,
+    estimatedYearlyProduction: 30,
+    estimatedYearlyConsumption: 30,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Starobielska',
@@ -32,7 +51,14 @@ const locations: Location[] = [
       lat: '49.82965615',
       long: '19.03617025',
     },
-    installations: [],
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
     buildings: [
       {
         roofArea: 400,
@@ -44,8 +70,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 100,
     estimatedDailyProduction: 100,
+    estimatedYearlyProduction: 100,
+    estimatedYearlyConsumption: 100,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Mickiewicza',
@@ -53,7 +86,14 @@ const locations: Location[] = [
       lat: '49.82760116',
       long: '19.04339766',
     },
-    installations: [],
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
     buildings: [
       {
         roofArea: 100,
@@ -65,8 +105,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 10,
     estimatedDailyProduction: 10,
+    estimatedYearlyProduction: 10,
+    estimatedYearlyConsumption: 10,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Legionów',
@@ -74,7 +121,14 @@ const locations: Location[] = [
       lat: '49.82729079',
       long: '19.05502605',
     },
-    installations: [],
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
     buildings: [
       {
         roofArea: 300,
@@ -86,8 +140,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 30,
     estimatedDailyProduction: 10,
+    estimatedYearlyProduction: 30,
+    estimatedYearlyConsumption: 30,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Podgórze',
@@ -95,7 +156,14 @@ const locations: Location[] = [
       lat: '49.80823027',
       long: '19.06566624',
     },
-    installations: [],
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
     buildings: [
       {
         roofArea: 800,
@@ -107,8 +175,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 340,
     estimatedDailyProduction: 120,
+    estimatedYearlyProduction: 340,
+    estimatedYearlyConsumption: 340,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Lipnicka',
@@ -116,7 +191,14 @@ const locations: Location[] = [
       lat: '49.81608356',
       long: '19.07765233',
     },
-    installations: [],
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
     buildings: [
       {
         roofArea: 150,
@@ -133,8 +215,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 12,
     estimatedDailyProduction: 120,
+    estimatedYearlyProduction: 12,
+    estimatedYearlyConsumption: 12,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Krakowska',
@@ -142,7 +231,14 @@ const locations: Location[] = [
       lat: '49.82341596',
       long: '19.0837012',
     },
-    installations: [],
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
     buildings: [
       {
         roofArea: 300,
@@ -154,8 +250,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 12,
     estimatedDailyProduction: 0,
+    estimatedYearlyProduction: 12,
+    estimatedYearlyConsumption: 12,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Kępna',
@@ -182,8 +285,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 18,
     estimatedDailyProduction: 20,
+    estimatedYearlyProduction: 18,
+    estimatedYearlyConsumption: 18,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Kępna',
@@ -210,8 +320,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 12,
     estimatedDailyProduction: 20,
+    estimatedYearlyProduction: 12,
+    estimatedYearlyConsumption: 12,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Józefa Braka',
@@ -238,8 +355,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 11,
     estimatedDailyProduction: 20,
+    estimatedYearlyProduction: 11,
+    estimatedYearlyConsumption: 11,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Józefa Braka',
@@ -266,8 +390,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 11,
     estimatedDailyProduction: 5,
+    estimatedYearlyProduction: 11,
+    estimatedYearlyConsumption: 11,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Żurawinowa',
@@ -299,8 +430,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 10,
     estimatedDailyProduction: 5,
+    estimatedYearlyProduction: 10,
+    estimatedYearlyConsumption: 10,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Oksywka',
@@ -338,8 +476,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 12,
     estimatedDailyProduction: 50,
+    estimatedYearlyProduction: 12,
+    estimatedYearlyConsumption: 12,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Jasna Rola',
@@ -347,7 +492,14 @@ const locations: Location[] = [
       lat: '49.85720272',
       long: '19.08621996',
     },
-    installations: [],
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
     buildings: [
       {
         roofArea: 140,
@@ -359,8 +511,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 14,
     estimatedDailyProduction: 0,
+    estimatedYearlyProduction: 14,
+    estimatedYearlyConsumption: 14,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Żywiecka',
@@ -368,7 +527,14 @@ const locations: Location[] = [
       lat: '49.81723614',
       long: '19.05579815',
     },
-    installations: [],
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
     buildings: [
       {
         roofArea: 120,
@@ -380,8 +546,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 14,
     estimatedDailyProduction: 0,
+    estimatedYearlyProduction: 14,
+    estimatedYearlyConsumption: 14,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Władysława Broniewskiego',
@@ -413,8 +586,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 150,
     estimatedDailyProduction: 38,
+    estimatedYearlyProduction: 150,
+    estimatedYearlyConsumption: 150,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Helmunta Kajzara',
@@ -441,8 +621,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 15,
     estimatedDailyProduction: 60,
+    estimatedYearlyProduction: 15,
+    estimatedYearlyConsumption: 15,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Krakowska',
@@ -469,8 +656,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 200,
     estimatedDailyProduction: 200,
+    estimatedYearlyProduction: 200,
+    estimatedYearlyConsumption: 200,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Wałowa',
@@ -497,8 +691,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 200,
     estimatedDailyProduction: 150,
+    estimatedYearlyProduction: 200,
+    estimatedYearlyConsumption: 200,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Warszawska',
@@ -525,8 +726,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 250,
     estimatedDailyProduction: 500,
+    estimatedYearlyProduction: 250,
+    estimatedYearlyConsumption: 250,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Michała Grażyńskiego',
@@ -553,8 +761,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 2500,
     estimatedDailyProduction: 500,
+    estimatedYearlyProduction: 2500,
+    estimatedYearlyConsumption: 2500,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Michała Grażyńskiego',
@@ -581,8 +796,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 2500,
     estimatedDailyProduction: 500,
+    estimatedYearlyProduction: 2500,
+    estimatedYearlyConsumption: 2500,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Wajedoty',
@@ -609,8 +831,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 250,
     estimatedDailyProduction: 500,
+    estimatedYearlyProduction: 250,
+    estimatedYearlyConsumption: 250,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Zawilców',
@@ -637,8 +866,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 280,
     estimatedDailyProduction: 300,
+    estimatedYearlyProduction: 280,
+    estimatedYearlyConsumption: 280,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Krzysztofa Kamila Baczyńskiego',
@@ -665,8 +901,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 50,
     estimatedDailyProduction: 51,
+    estimatedYearlyProduction: 50,
+    estimatedYearlyConsumption: 50,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Braterska',
@@ -693,8 +936,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 50,
     estimatedDailyProduction: 60,
+    estimatedYearlyProduction: 50,
+    estimatedYearlyConsumption: 50,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Ignacego Daszyńskiego',
@@ -721,8 +971,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 50,
     estimatedDailyProduction: 49,
+    estimatedYearlyProduction: 50,
+    estimatedYearlyConsumption: 50,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Komorowicka',
@@ -749,8 +1006,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 51,
     estimatedDailyProduction: 70,
+    estimatedYearlyProduction: 51,
+    estimatedYearlyConsumption: 51,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Węglowa',
@@ -777,8 +1041,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 51,
     estimatedDailyProduction: 80,
+    estimatedYearlyProduction: 51,
+    estimatedYearlyConsumption: 51,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Wincentego Witosa',
@@ -805,8 +1076,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 51,
     estimatedDailyProduction: 75,
+    estimatedYearlyProduction: 51,
+    estimatedYearlyConsumption: 51,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Wyzwolenia',
@@ -833,8 +1111,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 51,
     estimatedDailyProduction: 49,
+    estimatedYearlyProduction: 51,
+    estimatedYearlyConsumption: 51,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Oliwkowa',
@@ -861,8 +1146,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 51,
     estimatedDailyProduction: 150,
+    estimatedYearlyProduction: 51,
+    estimatedYearlyConsumption: 51,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Chryzantemowa',
@@ -889,8 +1181,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 51,
     estimatedDailyProduction: 150,
+    estimatedYearlyProduction: 51,
+    estimatedYearlyConsumption: 51,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Wyzwolenia',
@@ -917,8 +1216,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 2000,
     estimatedDailyProduction: 150,
+    estimatedYearlyProduction: 2000,
+    estimatedYearlyConsumption: 2000,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Krakowska',
@@ -945,8 +1251,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 150,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Lipnicka',
@@ -973,8 +1286,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 200,
     estimatedDailyProduction: 150,
+    estimatedYearlyProduction: 200,
+    estimatedYearlyConsumption: 200,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Sarni Stok',
@@ -1001,8 +1321,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 2000,
     estimatedDailyProduction: 0,
+    estimatedYearlyProduction: 2000,
+    estimatedYearlyConsumption: 2000,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Pienińska',
@@ -1029,8 +1356,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 0,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Pienińska',
@@ -1057,8 +1391,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 40,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'hetm. Jana Zamoyskiego',
@@ -1085,8 +1426,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 40,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Marcina Lutra',
@@ -1113,8 +1461,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 80,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Młyńska',
@@ -1141,8 +1496,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 150,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Młyńska',
@@ -1169,8 +1531,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 150,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Aleksandrowicka',
@@ -1197,8 +1566,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 150,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Doliny Miętusiej',
@@ -1225,8 +1601,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 5000,
     estimatedDailyProduction: 80,
+    estimatedYearlyProduction: 5000,
+    estimatedYearlyConsumption: 5000,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Pięciu Stawów',
@@ -1253,8 +1636,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 2000,
     estimatedDailyProduction: 0,
+    estimatedYearlyProduction: 2000,
+    estimatedYearlyConsumption: 2000,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Partyzantów',
@@ -1281,8 +1671,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 2000,
     estimatedDailyProduction: 80,
+    estimatedYearlyProduction: 2000,
+    estimatedYearlyConsumption: 2000,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Bystrzańska',
@@ -1309,8 +1706,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 80,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Przełom',
@@ -1337,8 +1741,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 80,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Barska',
@@ -1365,8 +1776,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 200,
     estimatedDailyProduction: 80,
+    estimatedYearlyProduction: 200,
+    estimatedYearlyConsumption: 200,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Miodowa',
@@ -1393,8 +1811,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 80,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Miernicza',
@@ -1421,8 +1846,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 800,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Kaliska',
@@ -1449,8 +1881,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 20,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Wielkopolska',
@@ -1477,8 +1916,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 200,
     estimatedDailyProduction: 80,
+    estimatedYearlyProduction: 200,
+    estimatedYearlyConsumption: 200,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Polna',
@@ -1505,8 +1951,15 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 80,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
   {
+    primaryContact: {
+      name: 'Jan Kowalski',
+      phone: '+482987484',
+      email: 'jan.kowalski@gmail.com'
+    },
     address: {
       city: 'Bielsko Biała',
       street: 'Krakowska',
@@ -1533,6 +1986,8 @@ const locations: Location[] = [
     productionDataPoints: [],
     estimatedDailyConsumption: 20,
     estimatedDailyProduction: 80,
+    estimatedYearlyProduction: 20,
+    estimatedYearlyConsumption: 20,
   },
 ]
 
