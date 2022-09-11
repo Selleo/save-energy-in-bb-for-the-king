@@ -67,8 +67,8 @@ export class Location {
   peopleNumber?: number
   estimatedDailyConsumption?: number // consumption in kWh
   estimatedDailyProduction?: number // consumption in kWh
-  estimatesYearlyConsumption?: number // consumption in kWh
-  estimatesYearlyProduction?: number // consumption in kWh
+  estimatedYearlyConsumption?: number // consumption in kWh
+  estimatedYearlyProduction?: number // consumption in kWh
   productionDataPoints: ProductionDataPoint[] = []
   consumptionDataPoints: ConsumptionDataPoint[] = []
 }

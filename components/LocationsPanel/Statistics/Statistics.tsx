@@ -126,16 +126,18 @@ const consumption = [
 
 interface StatisticsProps {
   estimatedDailyConsumption?: number,
-  estimatesYearlyConsumption?: number,
-  estimatesYearlyProduction?: number,
+  estimatedDailyProduction?: number,
+  estimatedYearlyConsumption?: number,
+  estimatedYearlyProduction?: number,
   productionDataPoints: ProductionDataPoint[],
   consumptionDataPoints: ProductionDataPoint[],
 }
 
 export function Statistics({
   estimatedDailyConsumption,
-  estimatesYearlyConsumption,
-  estimatesYearlyProduction,
+  estimatedDailyProduction,
+  estimatedYearlyConsumption,
+  estimatedYearlyProduction,
   productionDataPoints,
   consumptionDataPoints,
 }: StatisticsProps) {
@@ -147,15 +149,21 @@ export function Statistics({
         </div>
       )}
 
-      {estimatesYearlyConsumption && (
-        <div className={styles.estimatesYearlyConsumption}>
-          Przewidywana roczna konsumpcja {estimatesYearlyConsumption} kWh
+      {estimatedDailyProduction && (
+        <div className={styles.estimatedDailyProduction}>
+          Przewidywana dzienna produkcja {estimatedDailyProduction} kWh
         </div>
       )}
 
-      {estimatesYearlyProduction && (
-        <div className={styles.estimatesYearlyProduction}>
-          Przewidywana roczna produkcja {estimatesYearlyProduction} kWh
+      {estimatedYearlyConsumption && (
+        <div className={styles.estimatedYearlyConsumption}>
+          Przewidywana roczna konsumpcja {estimatedYearlyConsumption} kWh
+        </div>
+      )}
+
+      {estimatedYearlyProduction && (
+        <div className={styles.estimatedYearlyProduction}>
+          Przewidywana roczna produkcja {estimatedYearlyProduction} kWh
         </div>
       )}
 
