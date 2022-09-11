@@ -9,10 +9,11 @@ import { Location } from '../pages/api/location.type';
 const queryClient = new QueryClient()
 const resolution = 8;
 
-type LocationWithId = Location & { h3Id: string }
+export type LocationWithId = Location & { h3Id: string }
 
 const GridMapPage: NextPage = () => {
 	const [selectedCellId, selectCell] = useState<null | string>(null);
+	const [hovered, setHovered] = useState<null | string>(null);
   const { isLoading, error, data } = useQuery(['locations'], async () => {
 			const response = await fetch('/api/locations')
 			const data = await response.json();
@@ -38,8 +39,8 @@ const GridMapPage: NextPage = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <LocationsPanel data={filteredData}/>
-      <GridMap selectCell={selectCell} data={data}/>
+      <LocationsPanel data={filteredData} hovered={hovered}/>
+      <GridMap selectCell={selectCell} data={data} setHovered={setHovered}/>
     </QueryClientProvider>
   )
 }

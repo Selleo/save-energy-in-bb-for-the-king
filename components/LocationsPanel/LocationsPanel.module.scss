@@ -69,3 +69,8 @@
 .status {
 	margin-left: auto;
 }
+
+.hovered {
+   background: lighten($color: $background-light-color, $amount: 5);
+   @include transition(background);
+}

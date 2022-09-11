@@ -9,16 +9,20 @@
 		const delta = production - consumption;
 
 		switch(true) {
-			case(delta < 0): {
-				return "#ff0000"
+			case(delta > 10): {
+				return "#1f6f45"
 			}
 
 			case(delta > 0): {
-				return "#00ff00"
+				return "#38ac93"
 			}
 
 			case(delta === 0): {
-				return "#0000ff"
+				return "#458174"
+			}
+
+			case(delta < 0): {
+				return "#903531"
 			}
 		}
 	}

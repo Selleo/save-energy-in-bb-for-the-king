@@ -17,10 +17,11 @@ const resolution = 8;
 
 export interface GridMapProps {
 	selectCell: (id: string | null) => void
+	setHovered: (id: string | null) => void
 	data: LocationWithId[]
 }
 
-export function GridMap({selectCell, data}: GridMapProps) {
+export function GridMap({selectCell, data, setHovered}: GridMapProps) {
 	const hexagonFeatures = useMemo(() => {
 		const locations = data ?? []
 		const locHexagonIds = locations.map((loc: LocationWithId) => loc.h3Id)
@@ -55,11 +56,17 @@ export function GridMap({selectCell, data}: GridMapProps) {
 
 	const [cursor, setCursor] = useState<string>('auto');
   const onMouseEnter = useCallback((event: MapLayerMouseEvent) => {
-		if (event.features?.find(feature => feature.source === "h3-hexagons")) {
-			setCursor('pointer')
-		}
+		const hex = event.features?.find(feature => feature.source === "h3-hexagons")
+			if (hex) {
+				setCursor('pointer')
+			}
+			const cell = latLngToCell(event.lngLat.lat, event.lngLat.lng, resolution);
+			setHovered(cell)
 		}, []);
-  const onMouseLeave = useCallback(() => setCursor('auto'), []);
+  const onMouseLeave = useCallback(() => {
+		setCursor('auto')
+		setHovered(null)
+	}, []);
 
   return (
     <InteractiveMap
@@ -68,8 +75,8 @@ export function GridMap({selectCell, data}: GridMapProps) {
       initialViewState={viewport}
   		style={{width: '100vw', height: '100vh'}}
 			interactiveLayerIds={["hexagons"]}
-      // mapStyle="mapbox://styles/petermain/cko1ewc0p0st918lecxa5c8go"
-      mapStyle="mapbox://styles/mapbox/streets-v9"
+      mapStyle="mapbox://styles/petermain/cko1ewc0p0st918lecxa5c8go"
+      // mapStyle="mapbox://styles/mapbox/streets-v9"
 			onClick={handleClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}

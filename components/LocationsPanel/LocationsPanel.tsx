@@ -1,4 +1,6 @@
+import classNames from 'classnames'
 import { useState } from 'react'
+import { LocationWithId } from '../../pages'
 import { Location } from '../../pages/api/location.type'
 import { ConsumptionIcon, ProductionIcon } from '../Icon'
 import { Details } from './Details'
@@ -6,13 +8,19 @@ import { Details } from './Details'
 import styles from './LocationsPanel.module.scss'
 
 interface LocationPanelProps {
-  data: Location[],
+  data: LocationWithId[],
+  hovered: string|null,
 }
 
-export function LocationsPanel({ data }: LocationPanelProps) {
+export function LocationsPanel({ data, hovered }: LocationPanelProps) {
   const [currentIndex, setCurrentIndex] = useState<number | null>(null)
+	const stylesMap = {
+		location: styles.location,
+		hovered: styles.hovered,
+	}
+	const cx = classNames.bind(stylesMap);
 
-	const decoratedData: (Location & { delta: number })[] = data.map(loc => {
+	const decoratedData: (Location & { delta: number, h3Id: string })[] = data.map(loc => {
 		return {
 			...loc,
 			delta: (loc.estimatedDailyProduction || 0) - (loc.estimatedDailyConsumption || 0)
@@ -27,29 +35,29 @@ export function LocationsPanel({ data }: LocationPanelProps) {
           <h1>Miejsca</h1>
 
           <div className={styles.locations}>
-            {decoratedData.map((location, index) => (
-              <div className={styles.location} onClick={() => setCurrentIndex(index)}>
+            {decoratedData.map((loc, index) => (
+              <div className={cx(styles.location, { [styles.hovered]: loc.h3Id === hovered})} onClick={() => setCurrentIndex(index)}>
                 <div className={styles.address}>
 									<div className={styles.addressRow}>
-										{location.address.city} - {location.address.street} {location.address.number}
+										{loc.address.city} - {loc.address.street} {loc.address.number}
 									</div>
 									<div>
 										<div className={styles.badge}>
 											<ProductionIcon /> 
-											{location.estimatedDailyProduction} kWh
+											{loc.estimatedDailyProduction} kWh
 										</div>
 										<div className={styles.badge}>
 											<ConsumptionIcon /> 
-											{location.estimatedDailyConsumption} kWh
+											{loc.estimatedDailyConsumption} kWh
 										</div>
 									</div>
                 </div>
 								<div className={styles.status}>
-									<div className={location.delta > 0 ? styles.green : styles.red}></div>		
+									<div className={loc.delta > 0 ? styles.green : styles.red}></div>		
 								</div>
-                {location.peopleNumber && (
+                {loc.peopleNumber && (
                   <div className={styles.peopleNumber}>
-                    {location.peopleNumber} osób
+                    {loc.peopleNumber} osób
                   </div>
                 )}
               </div>
