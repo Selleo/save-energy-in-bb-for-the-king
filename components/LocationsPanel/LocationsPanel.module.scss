@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .locationsPanel {
   color: $white80;
@@ -16,10 +16,9 @@
 .section {
   background: $background-light-color;
   border-radius: 11px;
-  padding: .8em;
+  padding: 0.8em;
   margin-bottom: 1.5em;
 }
-
 
 .location,
 .person,
@@ -27,7 +26,7 @@
 .estimatedDailyConsumption,
 .estimatesYearlyConsumption,
 .estimatesYearlyProduction {
-  @extend .section
+  @extend .section;
 }
 
 .location {
@@ -45,23 +44,23 @@
 }
 
 .badge {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .addressRow {
-  font-size: 1.250em;
+  font-size: 1.25em;
   font-weight: 500;
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .red {
-	background-color: $red;
+  background-color: $red;
 }
 
 .green {
-	background-color: $green;
+  background-color: $green;
 }
 
 .red,
@@ -75,10 +74,10 @@
 }
 
 .status {
-	margin-left: auto;
+  margin-left: auto;
 }
 
 .hovered {
-   background: lighten($color: $background-light-color, $amount: 5);
-   @include animate(background);
+  background: lighten($color: $background-light-color, $amount: 5);
+  @include animate(background);
 }

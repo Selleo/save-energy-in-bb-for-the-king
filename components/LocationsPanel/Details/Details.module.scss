@@ -1,4 +1,4 @@
-@import '../../../styles/global.scss';
+@import "../../../styles/global.scss";
 
 .backArrow {
   cursor: pointer;
@@ -22,7 +22,7 @@
 .tab {
   cursor: pointer;
   text-align: center;
-  padding: .6em 0.3em;
+  padding: 0.6em 0.3em;
   border-bottom: 2px solid $background-light-color;
   @include animate(border-bottom color);
 }

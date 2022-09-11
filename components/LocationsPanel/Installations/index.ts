@@ -1,1 +1,1 @@
-export { Installations } from "./Installations"
+export { Installations } from "./Installations";

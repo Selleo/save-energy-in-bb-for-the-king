@@ -1,1 +1,1 @@
-export { LocationsPanel } from "./LocationsPanel"
+export { LocationsPanel } from "./LocationsPanel";
