@@ -85,8 +85,6 @@ export function GridMap({selectCell, data}: GridMapProps) {
 		}, []);
   const onMouseLeave = useCallback(() => setCursor('auto'), []);
 
-	console.log(hexagonFeatures)
-
   return (
     <InteractiveMap
 			// onViewportChange={(nextViewport) => setViewport(nextViewport)}
