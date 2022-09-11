@@ -17,8 +17,8 @@ export const LineChart = ({ data }: { data: any }) => {
       enableGridX={false}
       enableGridY={false}
       data={data}
-      margin={{ top: 50, right: 20, bottom: 50, left: 60 }}
-      xScale={{ type: "point" }}
+      margin={{ top: 0, right: 20, bottom: 50, left: 60 }}
+      xScale={{ type: 'point' }}
       yScale={{
         type: "linear",
         min: "auto",
