@@ -1,6 +1,8 @@
+@import '../../styles/global.scss';
+
 .locationsPanel {
-  color: #D2D2D5;
-  background: #1F1D2B;
+  color: $white80;
+  background: $background-color;
   position: fixed;
   left: 0;
   width: 400px;
@@ -12,7 +14,7 @@
 }
 
 .section {
-  background: #252836;
+  background: $background-light-color;
   border-radius: 1em;
   padding: 1em;
   margin-bottom: 1em;
@@ -26,4 +28,14 @@
 .estimatesYearlyConsumption,
 .estimatesYearlyProduction {
   @extend .section
+}
+
+.location {
+  cursor: pointer;
+  @include transition(background);
+
+  &:hover {
+    background: lighten($color: $background-light-color, $amount: 5);
+    @include transition(background);
+  }
 }

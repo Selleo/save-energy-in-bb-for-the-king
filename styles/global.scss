@@ -1,0 +1,11 @@
+@mixin transition($property, $time: .15s) {
+  transition: $property ease-in-out $time;
+}
+
+$background-color: #1F1D2B;
+$background-light-color: #252836;
+$white80: #D2D2D5;
+$white: #FFFFFF;
+$accent: #9494FB;
+$green: #1CBC6F;
+$orange: #FF8700;
