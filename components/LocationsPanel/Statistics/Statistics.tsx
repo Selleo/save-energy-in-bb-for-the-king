@@ -1,6 +1,7 @@
-import { ProductionDataPoint } from "../../../pages/api/location.type";
-import { LineChart } from "../../LineChart";
-import styles from "./Statistics.module.scss";
+import { ProductionDataPoint } from '../../../pages/api/location.type'
+import { ConsumptionIcon, ProductionIcon } from '../../Icon'
+import { LineChart } from '../../LineChart'
+import styles from './Statistics.module.scss'
 
 const production = [
   {
@@ -143,34 +144,48 @@ export function Statistics({
 }: StatisticsProps) {
   return (
     <>
+      <h4 className={`${styles.title} ${styles.green}`}>Dzienna produkcja energii</h4>
+      <div className={styles.statisticsWrapper}>
+        <LineChart data={production} />
+      </div>
+
+      <h4 className={`${styles.title} ${styles.orange}`}>Dzienne zużycie energii</h4>
+      <div className={styles.statisticsWrapper}>
+        <LineChart data={consumption} />
+      </div>
+
       {estimatedDailyConsumption && (
         <div className={styles.estimatedDailyConsumption}>
-          Przewidywana dzienna konsumpcja {estimatedDailyConsumption} kWh
+          <h4 className={`${styles.title} ${styles.orange}`}>Przewidywana dzienna konsumpcja</h4>
+          <div className={styles.value}>
+          <ConsumptionIcon/> {estimatedDailyConsumption} kWh
+          </div>
         </div>
       )}
       {estimatedDailyProduction && (
         <div className={styles.estimatedDailyProduction}>
-          Przewidywana dzienna produkcja {estimatedDailyProduction} kWh
+          <h4 className={`${styles.title} ${styles.green}`}>Przewidywana dzienna produkcja</h4>
+          <div className={styles.value}>
+            <ProductionIcon/> {estimatedDailyProduction} kWh
+          </div>
         </div>
       )}
       {estimatedYearlyConsumption && (
         <div className={styles.estimatedYearlyConsumption}>
-          Przewidywana roczna konsumpcja {estimatedYearlyConsumption} kWh
+          <h4 className={`${styles.title} ${styles.orange}`}>Przewidywana roczna konsumpcja</h4>
+          <div className={styles.value}>
+            <ConsumptionIcon/> {estimatedYearlyConsumption} kWh
+          </div>
         </div>
       )}
       {estimatedYearlyProduction && (
         <div className={styles.estimatedYearlyProduction}>
-          Przewidywana roczna produkcja {estimatedYearlyProduction} kWh
+          <h4 className={`${styles.title} ${styles.green}`}>Przewidywana roczna produkcja</h4>
+          <div className={styles.value}>
+            <ProductionIcon/> {estimatedYearlyProduction} kWh
+          </div>
         </div>
       )}
-      Dzienna produkcja:
-      <div className={styles.statisticsWrapper}>
-        <LineChart data={production} />
-      </div>
-      Dzienne zużycie:
-      <div className={styles.statisticsWrapper}>
-        <LineChart data={consumption} />
-      </div>
     </>
   );
 }

@@ -1,4 +1,33 @@
+@import '../../../styles/global.scss';
+
 .statisticsWrapper {
   width: 370px;
-  height: 220px;
+  height: 200px;
+}
+
+.title {
+  text-align: center;
+
+  &.green {
+    color: $green;
+  }
+
+  &.orange {
+    color: $orange;
+  }
+}
+
+.value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.4em;
+  line-height: 2;
+
+  svg {
+    margin-right: .3em;
+    position: relative;
+    bottom: 1px;
+  }
 }
