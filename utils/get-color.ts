@@ -1,9 +1,10 @@
+import { LocationWithId} from "../pages/index"
 	export const getColor = (data: any, feature: any) => {
-		const locationsWithinHexagon = data.filter(loc => loc.h3Id === feature.id)
-		const consumption = locationsWithinHexagon.reduce((acc, loc) => { 
+		const locationsWithinHexagon = data.filter((loc: any) => loc.h3Id === feature.id)
+		const consumption = locationsWithinHexagon.reduce((acc: number, loc: LocationWithId) => { 
 			return acc + (loc.estimatedDailyConsumption || 0)
 		}, 0)
-		const production = locationsWithinHexagon.reduce((acc, loc) => { 
+		const production = locationsWithinHexagon.reduce((acc: number, loc: LocationWithId) => { 
 			return acc + (loc.estimatedDailyProduction || 0)
 		}, 0)
 		const delta = production - consumption;
