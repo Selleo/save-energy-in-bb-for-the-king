@@ -22,7 +22,7 @@ export class Installation {
   type: InstallationType = InstallationType.SolarPanels
   production: number = 0 // production in kWh
   createdAt: Date = new Date()
-  pacement: PlacementType = PlacementType.Ground
+  placement: PlacementType = PlacementType.Ground
 }
 
 export enum BuildingType {

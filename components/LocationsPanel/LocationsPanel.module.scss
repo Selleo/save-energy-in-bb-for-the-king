@@ -1,4 +1,5 @@
 .locationsPanel {
+  color: #D2D2D5;
   background: #1F1D2B;
   position: fixed;
   left: 0;
@@ -7,4 +8,22 @@
   top: 0;
   bottom: 0;
   padding: 1em;
+  overflow: auto;
+}
+
+.section {
+  background: #252836;
+  border-radius: 1em;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+
+.location,
+.person,
+.peopleNumber,
+.estimatedDailyConsumption,
+.estimatesYearlyConsumption,
+.estimatesYearlyProduction {
+  @extend .section
 }
