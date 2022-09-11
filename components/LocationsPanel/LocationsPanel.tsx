@@ -1,9 +1,9 @@
 import classNames from "classnames";
-import { useState } from "react";
 import { LocationWithId } from "../../pages";
 import { Location } from "../../pages/api/location.type";
 import { ConsumptionIcon, ProductionIcon } from "../Icon";
 import { Details } from "./Details";
+import { Logo } from './../Logo';
 
 import styles from "./LocationsPanel.module.scss";
 
@@ -38,6 +38,10 @@ export function LocationsPanel({
 
   return (
     <div className={styles.locationsPanel}>
+      <div className={styles.logo}>
+        <Logo />
+      </div>
+
       {currentIndex === null && (
         <>
           <h1>Obszary</h1>
