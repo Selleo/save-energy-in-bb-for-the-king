@@ -31,6 +31,8 @@
 }
 
 .location {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   @include transition(background);
 
@@ -38,4 +40,32 @@
     background: lighten($color: $background-light-color, $amount: 5);
     @include transition(background);
   }
+}
+
+.badge {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.addressRow {
+	margin-bottom: 1rem;
+}
+
+.red {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-color: red;
+}
+
+.green {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-color: green;
+}
+
+.status {
+	margin-left: auto;
 }
