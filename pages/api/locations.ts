@@ -153,28 +153,7 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 12,
-    estimatedDailyProduction: 12,
-  },
-  {
-    address: {
-      city: 'Bielsko Biała',
-      street: '',
-      number: '',
-      lat: '49.',
-      long: '19.',
-    },
-    installations: [],
-    buildings: [
-      {
-        roofArea: 300,
-        roofMaterial: RoofMaterialType.Dachowka,
-        type: BuildingType.Unit
-      }
-    ],
-    consumptionDataPoints: [],
-    productionDataPoints: [],
-    estimatedDailyConsumption: 30,
-    estimatedDailyProduction: 40,
+    estimatedDailyProduction: 0,
   },
   {
     address: {
@@ -379,7 +358,1181 @@ const locations: Location[] = [
     consumptionDataPoints: [],
     productionDataPoints: [],
     estimatedDailyConsumption: 14,
-    estimatedDailyProduction: 50,
+    estimatedDailyProduction: 0,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Żywiecka',
+      number: '23',
+      lat: '49.81723614',
+      long: '19.05579815',
+    },
+    installations: [],
+    buildings: [
+      {
+        roofArea: 120,
+        roofMaterial: RoofMaterialType.Papa,
+        type: BuildingType.House
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 14,
+    estimatedDailyProduction: 0,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Władysława Broniewskiego',
+      number: '21',
+      lat: '49.81843914',
+      long: '19.05252062',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 30,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 800,
+        roofMaterial: RoofMaterialType.Blacha,
+        type: BuildingType.Unit
+      },
+      {
+        roofArea: 100,
+        roofMaterial: RoofMaterialType.Papa,
+        type: BuildingType.Unit
+      }
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 150,
+    estimatedDailyProduction: 38,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Helmunta Kajzara',
+      number: '22',
+      lat: '49.81403732',
+      long: '19.06504764',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.House
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 15,
+    estimatedDailyProduction: 60,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Krakowska',
+      number: '2',
+      lat: '49.82209138',
+      long: '19.05903656',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.House
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 200,
+    estimatedDailyProduction: 200,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Wałowa',
+      number: '21',
+      lat: '49.82577898',
+      long: '19.04689129',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 200,
+    estimatedDailyProduction: 150,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Warszawska',
+      number: '28',
+      lat: '49.83242004',
+      long: '19.04343466',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 250,
+    estimatedDailyProduction: 500,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Michała Grażyńskiego',
+      number: '141',
+      lat: '49.84235753',
+      long: '19.04586378',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 2500,
+    estimatedDailyProduction: 500,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Michała Grażyńskiego',
+      number: '141',
+      lat: '49.84716353',
+      long: '19.04315163',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 2500,
+    estimatedDailyProduction: 500,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Wajedoty',
+      number: '50',
+      lat: '49.84747552',
+      long: '19.05632368',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 250,
+    estimatedDailyProduction: 500,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Zawilców',
+      number: '14',
+      lat: '49.83900429',
+      long: '19.05921184',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 280,
+    estimatedDailyProduction: 300,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Krzysztofa Kamila Baczyńskiego',
+      number: '8',
+      lat: '49.8404155',
+      long: '19.06689997',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 50,
+    estimatedDailyProduction: 51,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Braterska',
+      number: '68',
+      lat: '49.84873202',
+      long: '19.06622118',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 50,
+    estimatedDailyProduction: 60,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Ignacego Daszyńskiego',
+      number: '56',
+      lat: '49.85056081',
+      long: '19.0509084',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 50,
+    estimatedDailyProduction: 49,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Komorowicka',
+      number: '211',
+      lat: '49.85215349',
+      long: '19.03988069',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 51,
+    estimatedDailyProduction: 70,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Węglowa',
+      number: '85',
+      lat: '49.84872544',
+      long: '19.03625473',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 51,
+    estimatedDailyProduction: 80,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Wincentego Witosa',
+      number: '7',
+      lat: '49.84064786',
+      long: '19.08133531',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 51,
+    estimatedDailyProduction: 75,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Wyzwolenia',
+      number: '113',
+      lat: '49.83714174',
+      long: '19.07311124',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 51,
+    estimatedDailyProduction: 49,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Oliwkowa',
+      number: '23',
+      lat: '49.83611677',
+      long: '19.08124739',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 51,
+    estimatedDailyProduction: 150,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Chryzantemowa',
+      number: '5',
+      lat: '49.83453356',
+      long: '19.08011335',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 51,
+    estimatedDailyProduction: 150,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Wyzwolenia',
+      number: '84',
+      lat: '49.8287834',
+      long: '19.07122792',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 2000,
+    estimatedDailyProduction: 150,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Krakowska',
+      number: '91',
+      lat: '49.82119245',
+      long: '19.07254685',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 150,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Lipnicka',
+      number: '228',
+      lat: '49.818645',
+      long: '19.08448368',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 200,
+    estimatedDailyProduction: 150,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Sarni Stok',
+      number: '93',
+      lat: '49.84246521',
+      long: '19.02918617',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 2000,
+    estimatedDailyProduction: 0,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Pienińska',
+      number: '98B',
+      lat: '49.83737996',
+      long: '19.02028091',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 0,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Pienińska',
+      number: '31',
+      lat: '49.83088281',
+      long: '19.0217907',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 40,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'hetm. Jana Zamoyskiego',
+      number: '26',
+      lat: '49.82327762',
+      long: '19.02820983',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 40,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Marcina Lutra',
+      number: '8',
+      lat: '49.8228307',
+      long: '19.04001318',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 80,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Młyńska',
+      number: '6',
+      lat: '49.80964339',
+      long: '19.05268377',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 150,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Młyńska',
+      number: '45',
+      lat: '49.81176155',
+      long: '19.04218915',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 150,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Aleksandrowicka',
+      number: '18',
+      lat: '49.81450008',
+      long: '19.0300332',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 150,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Doliny Miętusiej',
+      number: '8',
+      lat: '49.80222569',
+      long: '19.03453378',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 5000,
+    estimatedDailyProduction: 80,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Pięciu Stawów',
+      number: '5',
+      lat: '49.80612955',
+      long: '19.03495403',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 2000,
+    estimatedDailyProduction: 0,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Partyzantów',
+      number: '63',
+      lat: '49.80632313',
+      long: '19.04327058',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 2000,
+    estimatedDailyProduction: 80,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Bystrzańska',
+      number: '38',
+      lat: '49.79275891',
+      long: '19.05509163',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 80,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Przełom',
+      number: '1b',
+      lat: '49.79431067',
+      long: '19.0505593',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 80,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Barska',
+      number: '25',
+      lat: '49.79976068',
+      long: '19.05837273',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 200,
+    estimatedDailyProduction: 80,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Miodowa',
+      number: '15',
+      lat: '49.79874935',
+      long: '19.06546566',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 80,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Miernicza',
+      number: '35',
+      lat: '49.80579465',
+      long: '19.07755976',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 800,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Kaliska',
+      number: '55',
+      lat: '49.81265835',
+      long: '19.08514522',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 20,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Wielkopolska',
+      number: '28',
+      lat: '49.81521999',
+      long: '19.09476451',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 200,
+    estimatedDailyProduction: 80,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Polna',
+      number: '81c',
+      lat: '49.8231589',
+      long: '19.09638233',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 80,
+  },
+  {
+    address: {
+      city: 'Bielsko Biała',
+      street: 'Krakowska',
+      number: '315e',
+      lat: '49.82768537',
+      long: '19.09563557',
+    },
+    installations: [
+      {
+        createdAt: new Date('10/02/20209'),
+        placement: PlacementType.Roof,
+        production: 60,
+        type: InstallationType.SolarPanels,
+      }
+    ],
+    buildings: [
+      {
+        roofArea: 150,
+        roofMaterial: RoofMaterialType.Dachowka,
+        type: BuildingType.Unit
+      },
+    ],
+    consumptionDataPoints: [],
+    productionDataPoints: [],
+    estimatedDailyConsumption: 20,
+    estimatedDailyProduction: 80,
   },
 ]
 
