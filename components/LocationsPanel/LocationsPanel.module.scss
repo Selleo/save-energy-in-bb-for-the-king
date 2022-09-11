@@ -34,11 +34,11 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  @include transition(background);
+  @include animate(background);
 
   &:hover {
     background: lighten($color: $background-light-color, $amount: 5);
-    @include transition(background);
+    @include animate(background);
   }
 }
 
@@ -72,5 +72,5 @@
 
 .hovered {
    background: lighten($color: $background-light-color, $amount: 5);
-   @include transition(background);
+   @include animate(background);
 }

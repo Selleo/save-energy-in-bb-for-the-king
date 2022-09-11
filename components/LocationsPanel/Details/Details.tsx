@@ -48,7 +48,7 @@ export function Details({ location, back }: DetailsProps) {
           </div>
       </div>
 
-      <div>
+      <div className={styles.content}>
         {currentTab === 'statistics' && <Statistics
           estimatedDailyConsumption={location.estimatedDailyConsumption}
           estimatesYearlyConsumption={location.estimatesYearlyConsumption}

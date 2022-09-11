@@ -1,11 +1,25 @@
+@import '../../../styles/global.scss';
+
 .tabs {
-  display: flex
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .tab {
   cursor: pointer;
-  padding: 1em 0.3em;
+  text-align: center;
+  padding: .6em 0.3em;
+  border-bottom: 2px solid $background-light-color;
+  @include animate(border-bottom color);
 }
 
+.tab:hover,
 .currentTab {
+  color: $accent;
+  border-bottom: 2px solid $accent;
+  @include animate(border-bottom color);
+}
+
+.content {
+  padding-top: 1.5em;
 }

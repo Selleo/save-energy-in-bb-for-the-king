@@ -33,7 +33,7 @@ export enum BuildingType {
 
 export enum RoofMaterialType {
   Papa = 'Papa',
-  Dachowka = 'Dachowka',
+  Dachowka = 'Dachówka',
   Blacha = 'Blacha'
 }
 

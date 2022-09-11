@@ -1,5 +1,13 @@
-@mixin transition($property, $time: .15s) {
-  transition: $property ease-in-out $time;
+@mixin animate($property...) {
+  transition-property: $property;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin animate-fast($property...) {
+  transition-property: $property;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
 }
 
 $background-color: #1F1D2B;
