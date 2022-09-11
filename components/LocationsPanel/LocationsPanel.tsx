@@ -46,18 +46,22 @@ export function LocationsPanel({ data, hovered }: LocationPanelProps) {
                     {loc.address.city} - {loc.address.street} {loc.address.number}
                   </div>
                   <div>
-                    <div className={styles.badge}>
+                    <div className={styles.badge} title="Szacowana dzienna produkcja">
                       <ProductionIcon />
                       {loc.estimatedDailyProduction} kWh
                     </div>
-                    <div className={styles.badge}>
+                    <div className={styles.badge} title="Szacowane dzienne zużycie">
                       <ConsumptionIcon />
                       {loc.estimatedDailyConsumption} kWh
                     </div>
                   </div>
                 </div>
                 <div className={styles.status}>
-                  <div className={loc.delta > 0 ? styles.green : styles.red}></div>
+                  <div
+                    className={loc.delta > 0 ? styles.green : styles.red}
+                    title={loc.delta > 0 ? 'Działa' : 'Coś się popsuło'}
+                  >
+                  </div>
                 </div>
                 {loc.peopleNumber && (
                   <div className={styles.peopleNumber}>
