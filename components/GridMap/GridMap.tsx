@@ -4,6 +4,7 @@ import geojson2h3 from 'geojson2h3';
 import {latLngToCell} from "h3-js";
 import { useQuery } from '@tanstack/react-query'
 import { Location } from '../../pages/api/location.type';
+import { getColor } from '../../utils/get-color';
 
 type LocationWithId = Location & { h3Id: string }
 
@@ -20,31 +21,6 @@ export interface GridMapProps {
 }
 
 export function GridMap({selectCell, data}: GridMapProps) {
-	const getColor = (feature: any) => {
-		const locationsWithinHexagon = data.filter(loc => loc.h3Id === feature.id)
-		const consumption = locationsWithinHexagon.reduce((acc, loc) => { 
-			return acc + (loc.estimatedDailyConsumption || 0)
-		}, 0)
-		const production = locationsWithinHexagon.reduce((acc, loc) => { 
-			return acc + (loc.estimatedDailyProduction || 0)
-		}, 0)
-		const delta = production - consumption;
-
-		switch(true) {
-			case(delta < 0): {
-				return "#ff0000"
-			}
-
-			case(delta > 0): {
-				return "#00ff00"
-			}
-
-			case(delta === 0): {
-				return "#0000ff"
-			}
-		}
-	}
-
 	const hexagonFeatures = useMemo(() => {
 		const locations = data ?? []
 		const locHexagonIds = locations.map((loc: LocationWithId) => loc.h3Id)
@@ -53,7 +29,7 @@ export function GridMap({selectCell, data}: GridMapProps) {
 		const collection = geojson2h3.h3SetToFeatureCollection(uniq)
 		return {
 			...collection,
-			features: collection.features.map(feature => ({...feature, properties: { color: getColor(feature)}}))
+			features: collection.features.map(feature => ({...feature, properties: { color: getColor(data, feature)}}))
 		}
 	}, [data])
 

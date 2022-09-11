@@ -20,10 +20,6 @@ export function LocationsPanel({ data }: LocationPanelProps) {
 
 	})
 
-                  // {location.address.street}{' '}  {location.address.number}<br />
-                  // {location.address.city}<br />
-                  // {location.address.lat}<br />
-                  // {location.address.long}<br />
   return (
     <div className={styles.locationsPanel}>
       {currentIndex === null && (

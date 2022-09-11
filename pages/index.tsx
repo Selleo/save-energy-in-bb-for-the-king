@@ -20,7 +20,7 @@ const GridMapPage: NextPage = () => {
 			return data.map((loc: Location) => {
 				return {
 					...loc,
-					h3Id: latLngToCell(parseFloat(loc.address.lat), parseFloat(loc.address.long), resolution)
+					h3Id: latLngToCell(parseFloat(loc.address.lat), parseFloat(loc.address.long), resolution),
 				}
 			})
   })
