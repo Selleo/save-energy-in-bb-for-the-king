@@ -1,4 +1,4 @@
-import Map, { Layer, Source } from 'react-map-gl';
+import InteractiveMap, { Layer, MapLayerMouseEvent, Source } from 'react-map-gl';
 import { useMemo, useState } from "react"
 import geojson2h3 from 'geojson2h3';
 import {latLngToCell} from "h3-js";
@@ -14,19 +14,12 @@ const BB_CORDS = {
 }
 const resolution = 8;
 
-export function GridMap() {
-  const { isLoading, error, data } = useQuery(['locations'], async () => {
-			const response = await fetch('/api/locations')
-			const data = await response.json();
+export interface GridMapProps {
+	selectCell: (id: string | null) => void
+	data: LocationWithId[]
+}
 
-			return data.map((loc: Location) => {
-				return {
-					...location,
-					h3Id: latLngToCell(parseFloat(loc.address.lat), parseFloat(loc.address.long), resolution)
-				}
-			})
-		})
-
+export function GridMap({selectCell, data}: GridMapProps) {
 	const hexagonFeatures = useMemo(() => {
 		const locations = data ?? []
 		const locHexagonIds = locations.map((loc: LocationWithId) => loc.h3Id)
@@ -44,18 +37,31 @@ export function GridMap() {
     zoom: 11
   });
 
+	const handleClick = (event: MapLayerMouseEvent) => {
+		if (!event.features) return;
+		const isHex = event.features.find(feature => feature.source === "h3-hexagons")
+		if (!isHex) {
+			return selectCell(null)
+		};
+
+		const cell = latLngToCell(event.lngLat.lat, event.lngLat.lng, resolution);
+		selectCell(cell)
+	}
+
   return (
-    <Map
+    <InteractiveMap
 			// onViewportChange={(nextViewport) => setViewport(nextViewport)}
 			mapboxAccessToken={token}
       initialViewState={viewport}
   		style={{width: '100vw', height: '100vh'}}
+			interactiveLayerIds={["hexagons"]}
       // mapStyle="mapbox://styles/petermain/cko1ewc0p0st918lecxa5c8go"
       mapStyle="mapbox://styles/mapbox/streets-v9"
+			onClick={handleClick}
     >
-			<Source id="h3-hexes" type="geojson" data={hexagonFeatures}>
+			<Source id="h3-hexagons" type="geojson" data={hexagonFeatures}>
 				<Layer
-					id="h3-hexes-layer"
+					id="hexagons"
 					source="h3-hexes"
 					type="fill"
 					interactive={true}
@@ -66,6 +72,6 @@ export function GridMap() {
 					}}
 				/>
 			</Source>
-		</Map>
+		</InteractiveMap>
   );
 }
