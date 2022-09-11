@@ -3,24 +3,63 @@ import { Contact } from '../Contact'
 import { Installations } from '../Installations'
 import { Statistics } from '../Statistics'
 import { Location } from '../../../pages/api/location.type'
+import { useState } from 'react'
+import styles from './Details.module.scss'
 
 interface DetailsProps {
   location: Location,
+  back: Function,
 }
 
-export function Details({ location }: DetailsProps) {
+type DetailTabs = 'statistics' | 'installations' | 'buildings' | 'contact'
+
+export function Details({ location, back }: DetailsProps) {
+  const [currentTab, setCurrentTab] = useState<DetailTabs>('statistics')
+
   return (
-    <>
-      <Installations installations={location.installations} />
-      <Buildings buildings={location.buildings} />
-      <Contact primaryContact={location.primaryContact} />
-      <Statistics
-        estimatedDailyConsumption={location.estimatedDailyConsumption}
-        estimatesYearlyConsumption={location.estimatesYearlyConsumption}
-        estimatesYearlyProduction={location.estimatesYearlyProduction}
-        productionDataPoints={location.productionDataPoints}
-        consumptionDataPoints={location.consumptionDataPoints}
-      />
-    </>
+    <div className={styles.details}>
+      <h2>{location.address.street} {location.address.number}, {location.address.city}</h2>
+      <a href="#" onClick={() => back()}>Wstecz</a>
+
+      <div className={styles.tabs}>
+        <div
+          className={`${styles.tab} ${currentTab === 'statistics' && styles.currentTab}`}
+          onClick={() => setCurrentTab('statistics')}
+        >
+          Statystyki
+        </div>
+        <div
+          className={`${styles.tab} ${currentTab === 'installations' && styles.currentTab}`}
+          onClick={() => setCurrentTab('installations')}
+        >
+          Instalacje
+        </div>
+        <div
+          className={`${styles.tab} ${currentTab === 'buildings' && styles.currentTab}`}
+          onClick={() => setCurrentTab('buildings')}
+        >
+          Budynki
+        </div>
+        <div
+          className={`${styles.tab} ${currentTab === 'contact' && styles.currentTab}`}
+          onClick={() => setCurrentTab('contact')}
+        >
+            Kontakt
+          </div>
+      </div>
+
+      <div>
+        {currentTab === 'statistics' && <Statistics
+          estimatedDailyConsumption={location.estimatedDailyConsumption}
+          estimatesYearlyConsumption={location.estimatesYearlyConsumption}
+          estimatesYearlyProduction={location.estimatesYearlyProduction}
+          productionDataPoints={location.productionDataPoints}
+          consumptionDataPoints={location.consumptionDataPoints}
+        />}
+        {currentTab === 'installations' && <Installations installations={location.installations} />}
+        {currentTab === 'buildings' && <Buildings buildings={location.buildings} />}
+        {currentTab === 'contact' && <Contact primaryContact={location.primaryContact} />}
+      </div>
+    </div>
   )
 }
