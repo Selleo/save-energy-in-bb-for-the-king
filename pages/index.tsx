@@ -12,6 +12,14 @@ const resolution = 8;
 export type LocationWithId = Location & { h3Id: string }
 
 const GridMapPage: NextPage = () => {
+	useEffect(() => {
+		document.body.style.overflow = 'hidden'
+
+		return () => {
+			document.body.style.overflow = 'initial'
+		}
+	}, [])
+
 	const [selectedCellId, selectCell] = useState<null | string>(null);
 	const [hovered, setHovered] = useState<null | string>(null);
   const { isLoading, error, data } = useQuery(['locations'], async () => {
