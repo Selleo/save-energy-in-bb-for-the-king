@@ -23,7 +23,7 @@ export function Details({ location, back }: DetailsProps) {
         <BackArrowIcon />
       </div>
 
-      <h1>
+      <h1 className={styles.title}>
         {location.address.street} {location.address.number},{" "}
         {location.address.city}
       </h1>

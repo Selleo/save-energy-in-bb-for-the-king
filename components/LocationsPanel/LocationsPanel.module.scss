@@ -1,5 +1,16 @@
 @import "../../styles/global.scss";
 
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1em;
+
+  svg {
+    height: 30px;
+    width: auto;
+  }
+}
+
 .locationsPanel {
   color: $white80;
   background: $background-color;
@@ -66,7 +77,6 @@
 
 .red,
 .green {
-  // border-radius: 0 50% 50% 0;
   width: 11px;
   height: 100%;
   position: absolute;
