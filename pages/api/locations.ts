@@ -179,7 +179,7 @@ const locations: Location[] = [
     installations: [
       {
         createdAt: new Date('01/01/2019'),
-        pacement: PlacementType.Roof,
+        placement: PlacementType.Roof,
         production: 3.6,
         type: InstallationType.SolarPanels,
       }
@@ -206,7 +206,7 @@ const locations: Location[] = [
     installations: [
       {
         createdAt: new Date('01/01/2019'),
-        pacement: PlacementType.Roof,
+        placement: PlacementType.Roof,
         production: 3.8,
         type: InstallationType.SolarPanels,
       }
@@ -233,7 +233,7 @@ const locations: Location[] = [
     installations: [
       {
         createdAt: new Date('01/10/2019'),
-        pacement: PlacementType.Roof,
+        placement: PlacementType.Roof,
         production: 5.4,
         type: InstallationType.SolarPanels,
       }
@@ -260,7 +260,7 @@ const locations: Location[] = [
     installations: [
       {
         createdAt: new Date('01/10/2019'),
-        pacement: PlacementType.Roof,
+        placement: PlacementType.Roof,
         production: 5.4,
         type: InstallationType.SolarPanels,
       }
@@ -287,7 +287,7 @@ const locations: Location[] = [
     installations: [
       {
         createdAt: new Date('01/10/2020'),
-        pacement: PlacementType.Roof,
+        placement: PlacementType.Roof,
         production: 8,
         type: InstallationType.SolarPanels,
       }
@@ -319,13 +319,13 @@ const locations: Location[] = [
     installations: [
       {
         createdAt: new Date('01/12/2020'),
-        pacement: PlacementType.Roof,
+        placement: PlacementType.Roof,
         production: 8,
         type: InstallationType.SolarPanels,
       },
       {
         createdAt: new Date('01/12/2020'),
-        pacement: PlacementType.Ground,
+        placement: PlacementType.Ground,
         production: 8,
         type: InstallationType.SolarPanels,
       }
